@@ -1,26 +1,27 @@
 package com.curso.produtosapi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
+@Data
+@NoArgsConstructor
+@Table(name = "produto")
 @Entity
-@Getter
-@Setter
 public class ProdutoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     private String nome;
 
-    private String descrição;
+    private String descricao;
 
     private Double preco;
 
-
+    public ProdutoEntity(String nome, String descricao, Double preco) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+    }
 }
