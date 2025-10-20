@@ -1,10 +1,10 @@
-package com.curso.arquiteturaspring;
+package com.curso.montadoraapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ArquiteturaSpringApplicationTests {
+class ProdutosApiApplicationTests {
 
     @Test
     void contextLoads() {
